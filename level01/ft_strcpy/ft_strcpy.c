@@ -1,10 +1,11 @@
+#include <stdio.h>
 #include <stdlib.h>
 
-char	*ft_strcpy(char *s1, char *s2)
+char *ft_strcpy(char *s1, char *s2);
 {
-	int	i = 0;
+	int i = 0;
 
-	s1 = (char *)malloc(sizeof(char *));
+	s1 = (char *)malloc(sizeof(char));
 	if (!s1 || !s2)
 		return (NULL);
 	while(s2[i] != '\0')
@@ -13,5 +14,6 @@ char	*ft_strcpy(char *s1, char *s2)
 		i++;
 	}
 	s1[i] = '\0';
+	free(s1);
 	return (s1);
 }
